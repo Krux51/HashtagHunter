@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@android:color/black">
+    <FrameLayout    xmlns:tools="http://schemas.android.com/tools"    android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:ignore="MergeRootFrame" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/main_title"/>
+
+    <Button
+        android:id="@+id/btn_youtube"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+
+        android:text="Go to youtube"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_flickr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+
+        android:text="Go to Flickr"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tweeterBtn"
+        android:layout_gravity="center"
+        android:text="@string/go_to_twitter"
+
+        android:background="@drawable/button"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"/>
+
+    <ImageView
+        android:id="@+id/imageIv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo" />
+
+</LinearLayout>

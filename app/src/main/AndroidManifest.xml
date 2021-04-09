@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.sampleapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        tools:replace="android:label"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Hashtag Hunter"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Registration.Forgotpassword"></activity>
+        <activity android:name=".Registration.RegisterUser" />
+        <activity android:name=".Registration.MainActivityy" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity_twitter"/>
+        <activity android:name=".MainActivity">
+
+
+        </activity>
+        <activity android:name=".activities.SearchActivity"/>
+
+        <activity
+            android:name=".activities.DownloadActivity"
+            android:label="@string/download"
+            android:launchMode="singleTop"
+            android:parentActivityName=".activities.PlaylistActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.PlaylistActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.PlaylistActivity"
+            android:label="@string/playlist"
+            android:launchMode="singleTop"
+            android:parentActivityName=".activities.SearchActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.SearchActivity" />
+        </activity>
+        <activity android:name=".flickr.MainActivity_flickr"
+            tools:ignore="Instantiatable">
+
+
+        </activity>
+        <activity
+            android:name=".flickr.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:parentActivityName=".flickr.MainActivity_flickr">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.sampleapp.flickr.MainActivity_flickr" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+        <activity
+            android:name=".flickr.PhotoDetailActivity"
+            android:parentActivityName=".flickr.MainActivity_flickr"
+            android:label="@string/title_activity_photo_detail"/>
+    </application>
+
+</manifest>
